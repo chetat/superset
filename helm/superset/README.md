@@ -31,7 +31,7 @@ Apache Superset is a modern, enterprise-ready business intelligence web applicat
 
 ## Source Code
 
-- <https://github.com/apache/superset>
+* <https://github.com/apache/superset>
 
 ## TL;DR
 
@@ -48,10 +48,10 @@ On helm this can be set on `extraSecretEnv.SUPERSET_SECRET_KEY` or `configOverri
 
 ## Requirements
 
-| Repository                         | Name       | Version |
-| ---------------------------------- | ---------- | ------- |
-| https://charts.bitnami.com/bitnami | postgresql | 12.1.6  |
-| https://charts.bitnami.com/bitnami | redis      | 17.9.4  |
+| Repository | Name | Version |
+|------------|------|---------|
+| https://charts.bitnami.com/bitnami | postgresql | 12.1.6 |
+| https://charts.bitnami.com/bitnami | redis | 17.9.4 |
 
 ## Values
 
