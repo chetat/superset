@@ -29,7 +29,11 @@ maintainers:
   - name: craig-rueda
     email: craig@craigrueda.com
     url: https://github.com/craig-rueda
+<<<<<<< HEAD
 version: 0.12.6
+=======
+version: 0.12.1
+>>>>>>> debe7811d0 (fix: helm chart comment on SECRET_KEY (#26674))
 dependencies:
   - name: postgresql
     version: 12.1.6
