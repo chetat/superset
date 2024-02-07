@@ -106,7 +106,11 @@ flask==2.2.5
     #   flask-session
     #   flask-sqlalchemy
     #   flask-wtf
+<<<<<<< HEAD
 flask-appbuilder==4.4.1
+=======
+flask-appbuilder==4.3.11
+>>>>>>> 534e8f394e (fix: bump FAB to 4.3.11 (#27039))
     # via apache-superset
 flask-babel==1.0.0
     # via flask-appbuilder
