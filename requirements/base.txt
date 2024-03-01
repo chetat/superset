@@ -358,7 +358,6 @@ typing-extensions==4.4.0
     #   apache-superset
     #   cattrs
     #   flask-limiter
-    #   kombu
     #   limits
     #   shillelagh
 tzdata==2023.3
