@@ -54,6 +54,7 @@ SQLALCHEMY_EXAMPLES_URI = (
     f"{EXAMPLES_HOST}:{EXAMPLES_PORT}/{EXAMPLES_DB}"
 )
 
+
 REDIS_HOST = os.getenv("REDIS_HOST", "redis")
 REDIS_PORT = os.getenv("REDIS_PORT", "6379")
 REDIS_CELERY_DB = os.getenv("REDIS_CELERY_DB", "0")
@@ -70,7 +71,7 @@ CACHE_CONFIG = {
     "CACHE_REDIS_DB": REDIS_RESULTS_DB,
 }
 DATA_CACHE_CONFIG = CACHE_CONFIG
-
+# APP_ICON = "/static/assets/images/logo_transparent.png" 
 
 class CeleryConfig:
     broker_url = f"redis://{REDIS_HOST}:{REDIS_PORT}/{REDIS_CELERY_DB}"
@@ -92,14 +93,38 @@ class CeleryConfig:
 
 CELERY_CONFIG = CeleryConfig
 
-FEATURE_FLAGS = {"ALERT_REPORTS": True}
+FEATURE_FLAGS = {
+    "ALERTS_ATTACH_REPORTS": True,
+    "ALERT_REPORTS": True,
+    "DASHBOARD_RBAC": True,
+    "EMBEDDABLE_CHARTS": True,
+    "EMBEDDED_SUPERSET": True,
+    "ENABLE_TEMPLATE_PROCESSING": True,
+    "LISTVIEWS_DEFAULT_CARD_VIEW": True,
+    "SCHEDULED_QUERIES": True,
+    "SQL_VALIDATORS_BY_ENGINE": True,
+    "THUMBNAILS": True,
+    "GUEST_TOKEN": True,
+}
+
 ALERT_REPORTS_NOTIFICATION_DRY_RUN = True
 WEBDRIVER_BASEURL = "http://superset:8088/"
 # The base URL for the email report hyperlinks.
 WEBDRIVER_BASEURL_USER_FRIENDLY = WEBDRIVER_BASEURL
 
 SQLLAB_CTAS_NO_LIMIT = True
+ENABLE_CORS = True
 
+# Development
+SESSION_COOKIE_SAMESITE = None
+SESSION_COOKIE_SECURE = False
+SESSION_COOKIE_HTTPONLY = False
+WTF_CSRF_ENABLED = False
+TALISMAN_ENABLED = False
+
+PUBLIC_ROLE_LIKE = "Gamma"
+ENABLE_PROXY_FIX = True
+HTTP_HEADERS = {'X-Frame-Options': 'ALLOWALL'}
 #
 # Optionally import superset_config_docker.py (which will have been included on
 # the PYTHONPATH) in order to allow for local settings to be overridden

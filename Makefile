@@ -115,3 +115,15 @@ report-celery-beat:
 
 admin-user:
 	superset fab create-admin
+
+prod-up:
+	docker-compose -f docker-compose-non-dev.yml up --build
+
+prod-down:
+	docker-compose -f docker-compose-non-dev.yml down
+
+dev-up:
+	docker-compose -f docker-compose-dev.yml up --build
+
+dev-down:
+	docker-compose -f docker-compose-dev.yml down
