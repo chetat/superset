@@ -117,7 +117,7 @@ admin-user:
 	superset fab create-admin
 
 prod-up:
-	docker-compose -f docker-compose-image-tag.yml up --build
+	docker-compose -f docker-compose-image-tag.yml up --build -d
 
 prod-down:
 	docker-compose -f docker-compose-image-tag.yml down
